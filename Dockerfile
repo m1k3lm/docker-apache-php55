@@ -14,9 +14,10 @@ RUN apt-get update && \
       php5-ldap \
       php5-mysql \
       php5-curl \
+      mcrypt \
       php5-mcrypt \      
       php5-pgsql
-
+RUN php5enmod mcrypt
 COPY apache_default /etc/apache2/sites-available/000-default.conf
 COPY run /usr/local/bin/run
 RUN chmod +x /usr/local/bin/run
