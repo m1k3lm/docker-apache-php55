@@ -13,6 +13,8 @@ RUN apt-get update && \
       php5-json \
       php5-ldap \
       php5-mysql \
+      php5-curl \
+      php5-mcrypt \      
       php5-pgsql
 
 COPY apache_default /etc/apache2/sites-available/000-default.conf
